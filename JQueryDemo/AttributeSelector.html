@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('span[title][style]').css('border','5px solid black')
+        }
+        );
+    </script>
+</head>
+<body>
+    <div title="divTitle" style="background-color:red">
+        Red DIV
+    </div>
+    <br />
+    <span title="divTitle" style="background-color:green">
+        Green DIV
+    </span>
+    <br />
+    <div title="divTitle">
+        Normal Div
+    </div>
+    <br/>
+    <div>
+        Normal Div without any attributes
+    </div>
+</body>
+</html>

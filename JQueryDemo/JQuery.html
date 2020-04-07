@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        //$(document).ready(function () {
+        //    $('#button1').click(function () {
+        //        alert('Jquery Tutorial');
+        //    })
+        //})
+        //jQuery id selector
+        $(document).ready(function () {
+            //$('#button1').css('background-color','green')
+            $('#table1 tr:even').css('background-color', 'red')
+            $('#table1 tr:odd').css('background-color', 'green')
+            //$('tr').each(function () {
+            //    alert($(this).html());
+            //});
+            $('div a,span').css('background-color','yellow')
+        });
+        //jQuery Element selector
+
+    </script>
+</head>
+<body>
+    <table id="table1" border="1" style="border:1px dotted black">
+        <tr>
+            <td>C#</td>
+            <td>ASP.NET</td>
+            <td>SQL Server</td>
+        </tr>
+        <tr>
+            <td>ADO.NET</td>
+            <td>JQuery</td>
+            <td>JavaScript</td>
+        </tr>
+        <tr>
+            <td>AJAX</td>
+            <td>CSS</td>
+            <td>HTML</td>
+        </tr>
+        <tr>
+            <td>VB</td>
+            <td>Dot NET</td>
+            <td>Visual C++</td>
+        </tr>
+        <tr>
+            <td>Oracle</td>
+            <td>Java</td>
+            <td>J2EEE</td>
+        </tr>
+    </table>
+    <br /><br />
+    <table id="table2" border="1" style="border:1px dotted black">
+        <tr>
+            <td>C#</td>
+            <td>ASP.NET</td>
+            <td>SQL Server</td>
+        </tr>
+        <tr>
+            <td>ADO.NET</td>
+            <td>JQuery</td>
+            <td>JavaScript</td>
+        </tr>
+        <tr>
+            <td>AJAX</td>
+            <td>CSS</td>
+            <td>HTML</td>
+        </tr>
+     
+    </table>
+    <br /><br />
+    <div>
+        DIV 1
+        <br />
+        <a href="http://ananth.com">Ananth</a>
+    </div>
+    <br /><br />
+    <div>DIV 2</div>
+    <br /><br />
+    <span>SPAN 1</span>
+    <br /><br />
+    <div>DIV 3</div>
+</body>
+</html>

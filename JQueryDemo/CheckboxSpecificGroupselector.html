@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.4.1.js"></script>
+        <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('input[name="skills"]').click(function () {
+                getCheckedValues('skills');
+            });
+            $('input[name="locations"]').click(function () {
+                getCheckedValues('locations');
+            });
+            var getCheckedValues = function (groupName) {
+                var result = $('input[name="' + groupName+'"]:checked');
+                if (result.length > 0) {
+                    var resultString = result.length + " checkbox selected <br/>";
+                    result.each(function () {
+                        var checkVal = $(this).val();
+                        resultString += checkVal+ '-'+ $('label[for="Option-'+checkVal+'"]').text() + "<br/>"
+                    }
+                    );
+                    $('#div'+groupName).html(resultString);
+                }
+                else {
+                    $('#div'+groupName).html("No checkbox is selected");
+                }
+            };
+        }
+        );
+    
+           </script>
+</head>
+<body>
+    <b style="font-family:Arial">Demo for selected specific value from checkbox group </b>
+    <br /><br />
+    <b>Skills:</b>
+    <input type="checkbox" name="skills" value="JS" />
+    <label for="Option-JS">JavaScript</label>
+    <input type="checkbox" name="skills" value="JQ" />
+    <label for="Option-JQ">JQuery</label>
+    <input type="checkbox" name="skills" value="VB" />
+    <label for="Option-VB">VB.Net</label>
+    <input type="checkbox" name="skills" value="C#" /> 
+    <label for="Option-C#">C#</label>
+    <br /><br />
+   <b> Preferred Locations:</b>
+    <input type="checkbox" name="locations" value="Chennai" />Chennai
+    <input type="checkbox" name="locations" value="Hyderabad" />Hyderabad
+    <input type="checkbox" name="locations" value="Mysore" />Mysore
+    <input type="checkbox" name="locations" value="Bangalore" /> Bangalore
+    <br /><br />
+    <!--<input id="btnSkills" type="submit" value="GetSkills" />
+    <input id="btnLocations" type="submit" value="GetLocation" />-->
+    <br />
+    <div id="divskills"></div>
+    <div id="divlocations"></div>
+</body>
+</html>

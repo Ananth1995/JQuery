@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //$('div[title="DivTest"]').css('border', '5px solid red')
+
+        //to convert whole word to lowercase and exact match with values
+            //$('div[title]').filter(function () {
+            //    return $(this).attr('title').toLowerCase()== "divtest";
+            //}).css('border', '5px solid red');
+        //to convert substring to case insensitive and check it is present in attribute value
+            //$('div[title]').filter(function () {
+            //    return (/Div/i).test($(this).attr('title'));
+            //}).css('border', '5px solid red');
+        //check different way of the above function
+            $('div[title]').filter(function () {
+                return $(this).attr('title');
+                
+            }
+            ).css('border', '5px solid red')
+
+            $('div[title]').filter(function () {
+                $(this).attr('title')
+            }
+        }
+        );
+    </script>
+</head>
+<body>
+    <b>Attribute case insensitive selector</b>
+    <br/><br />
+    <div title="ivTest">
+        Both upper and lower
+    </div>
+    <br/>
+    <div title="divtest">
+        Only Lower
+    </div>
+    <br />
+    <div title="DIVTEST">
+        only Upper
+    </div>
+</body>
+</html>
